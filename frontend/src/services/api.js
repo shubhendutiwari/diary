@@ -68,4 +68,17 @@ export const userAPI = {
     updateProfile: (data) => api.put('/users/me', data),
 };
 
+// Connections API
+export const connectionAPI = {
+    searchPeople: (q = '') => api.get(`/connections/search?q=${encodeURIComponent(q)}`),
+    sendRequest: (userId) => api.post(`/connections/request/${userId}`),
+    acceptRequest: (connectionId) => api.post(`/connections/accept/${connectionId}`),
+    rejectRequest: (connectionId) => api.post(`/connections/reject/${connectionId}`),
+    removeFriend: (userId) => api.delete(`/connections/${userId}`),
+    getFriends: () => api.get('/connections/friends'),
+    getPending: () => api.get('/connections/pending'),
+    getSent: () => api.get('/connections/sent'),
+    getCounts: () => api.get('/connections/counts'),
+};
+
 export default api;

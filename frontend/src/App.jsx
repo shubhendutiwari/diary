@@ -8,6 +8,7 @@ import FeedPage from './pages/FeedPage';
 import MyDiaryPage from './pages/MyDiaryPage';
 import EntryEditorPage from './pages/EntryEditorPage';
 import ProfilePage from './pages/ProfilePage';
+import PeoplePage from './pages/PeoplePage';
 
 function ProtectedRoute({ children }) {
   const { user, loading } = useAuth();
@@ -35,6 +36,7 @@ function AppRoutes() {
         <Route path="/my-diary" element={<ProtectedRoute><MyDiaryPage /></ProtectedRoute>} />
         <Route path="/write" element={<ProtectedRoute><EntryEditorPage /></ProtectedRoute>} />
         <Route path="/profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
+        <Route path="/people" element={<ProtectedRoute><PeoplePage /></ProtectedRoute>} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>

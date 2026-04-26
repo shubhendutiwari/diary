@@ -14,6 +14,8 @@ public class UserResponse {
     private String authProvider;
     private LocalDateTime createdAt;
     private int streak;
+    private long friendCount;
+    private long pendingRequests;
 
     public UserResponse() {}
 
@@ -62,4 +64,10 @@ public class UserResponse {
 
     public int getStreak() { return streak; }
     public void setStreak(int streak) { this.streak = streak; }
+
+    public long getFriendCount() { return friendCount; }
+    public void setFriendCount(long friendCount) { this.friendCount = friendCount; }
+
+    public long getPendingRequests() { return pendingRequests; }
+    public void setPendingRequests(long pendingRequests) { this.pendingRequests = pendingRequests; }
 }

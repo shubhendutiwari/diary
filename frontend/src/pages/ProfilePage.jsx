@@ -166,6 +166,10 @@ export default function ProfilePage() {
                         <div className="profile-stat-value">{totalComments}</div>
                         <div className="profile-stat-label">Comments</div>
                     </div>
+                    <div className="profile-stat">
+                        <div className="profile-stat-value">{profile?.friendCount || 0}</div>
+                        <div className="profile-stat-label">Friends</div>
+                    </div>
                 </div>
             </div>
 

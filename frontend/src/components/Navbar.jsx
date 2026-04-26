@@ -33,6 +33,9 @@ export default function Navbar() {
                             <Link to="/write" className={`nav-link ${isActive('/write')}`}>
                                 ✨ Write
                             </Link>
+                            <Link to="/people" className={`nav-link ${isActive('/people')}`}>
+                                👥 People
+                            </Link>
                             <Link to="/profile" className={`nav-link ${isActive('/profile')}`}>
                                 👤 Profile
                             </Link>
