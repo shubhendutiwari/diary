@@ -44,7 +44,7 @@ function AppRoutes() {
 function App() {
   return (
     <AuthProvider>
-      <Router>
+      <Router basename="/diary">
         <AppRoutes />
       </Router>
     </AuthProvider>
